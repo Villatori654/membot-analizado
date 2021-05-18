@@ -2,12 +2,13 @@ const { Client, MessageAttachment } = require('discord.js');
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
+///constantes, son las cosas que requiere para funcionar
 
 
 client.on("ready", () => {
     console.log("He vuelto a ser encendido por mi amo y señor villatori");
  });
-
+//esto pone en la pestaña de cuando enciendes el bot, el mensaje de que ha sido encendido
  client.on("message", (message) => {
   if(message.content.startsWith("IP")) {
     message.channel.send("La IP es MedievalEurope.mcnetwork.me, a un que, la tienes en el mensaje fijado de <#726108909051445319>");
@@ -536,6 +537,13 @@ client.on("message", (message) => {
 
 });
 
+// client.on("message", (message) => {
+//   if(message.content.startsWith("ping")) {
+//     message.channel.send("pong");
+//   }
+//
+// });
+// Todos los que son así, son mensaje de entrada arriba, mensaje de salida abajo, no tienen peligro
 
 
 client.on('message', message => {
@@ -563,11 +571,15 @@ client.on('message', message => {
   }
 });
 
+// Modulo de kick, no funciona, crashea el bot xd
+
 client.on("message", (message) => {
   if(message.content.startsWith("<@663675393882062870>")) {
     message.channel.send("***ALFONSO!!! TE LLAMAN***     ||<@663675393882062870>||");
   }
 
 });
+
  
  client.login("token");
+// Aqui va el token, el identificador de discord que lo vincula con el bot
